@@ -10,20 +10,21 @@ public class Main {
         Queue antrian = new Queue(5);
         
         antrian.insert(1);
+        antrian.insert(2);
         antrian.insert(3);
+        antrian.insert(4);
         antrian.insert(5);
         antrian.insert(6);
-        
         antrian.view();
         
-        System.out.println("\nMenghapus item dari antrian");
-        System.out.println(
-            "Item yang terhapus adalah " + 
-            antrian.remove() +
-            "\n"
-        );
-        
+        antrian.remove();
+        antrian.remove();
+        antrian.remove();
+        antrian.remove();
+        antrian.remove();
+        antrian.remove();
         antrian.view();
         
     }
 }
+// EOF

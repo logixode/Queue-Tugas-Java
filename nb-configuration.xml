@@ -8,21 +8,28 @@ Without this configuration present, some functionality in the IDE may be limited
 -->
     <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
         <word>antrian</word>
+        <word>atau</word>
         <word>baru</word>
+        <word>cek</word>
         <word>Cuns</word>
         <word>Cunstructor</word>
         <word>dari</word>
         <word>dengan</word>
         <word>ingin</word>
+        <word>jika</word>
         <word>ke</word>
         <word>kedalam</word>
+        <word>kondisi</word>
+        <word>kosong</word>
         <word>maksimal</word>
         <word>memasukkan</word>
         <word>menampilkan</word>
         <word>menata</word>
         <word>menghapus</word>
+        <word>mereturn</word>
         <word>nilai</word>
         <word>panjang</word>
+        <word>penuh</word>
         <word>pertama</word>
         <word>proses</word>
         <word>telah</word>

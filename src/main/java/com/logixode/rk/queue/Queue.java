@@ -22,18 +22,28 @@ public class Queue {
      * @param value int  nilai baru yang ingin di-insert ke array
      */
     public void insert( int value ) {
-        rear++;
-        myQueue[rear] = value;
+        if( isFull() ) {
+            System.out.println("Maaf, antrian sedang penuh...\n");
+        }
+        else {
+            rear++;
+            myQueue[rear] = value;
+        }
     }
     
     /** Method untuk menampilkan antrian
      * @param none
      */
     public void view() {
-        System.out.println("Antriannya adalah :");
-        
-        for (int i = 0; i <= rear; i++) {
-            System.out.println("\t" + myQueue[i]);
+        if( isEmpty() ) {
+            System.out.println("Antian bisa diisi kembali.\n");
+        }
+        else {
+            System.out.println("Antriannya adalah :");
+            for (int i = 0; i <= rear; i++) {
+                System.out.println("\t" + myQueue[i]);
+            }
+            System.out.println();
         }
     }
     
@@ -41,10 +51,16 @@ public class Queue {
      * @return array index pertama dari myQueue[] yang telah terhapus
      */
     public int remove() {
-        int removed = myQueue[0];
-        shifting();
-        rear--;
-        return removed;
+        if( isEmpty() ) {
+            System.out.println("Maaf, antrian sudah kosong.\n");
+            return 0;
+        }
+        else {
+            int removed = myQueue[0];
+            shifting();
+            rear--;
+            return removed;
+        }
     }
     
     /** Method untuk menata ulang urutan antrian
@@ -58,4 +74,18 @@ public class Queue {
         myQueue[rear] = 0;
     }
     
+    /** Function untuk cek kondisi jika myQueue[] kosong
+     * @return true atau false
+     */
+    public boolean isEmpty() {
+        return (rear == -1);
+    }
+    
+    /** Function untuk cek kondisi jika myQueue[] penuh
+     * @return true atau false
+     */
+    public boolean isFull() {
+        return (maxQueue -1 == rear);
+    }
 }
+// EOF
